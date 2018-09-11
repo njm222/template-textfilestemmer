@@ -99,6 +99,7 @@ public class TextFileStemmerTest {
 			Path actualPath = Paths.get("out", "words.tExT");
 
 			Files.deleteIfExists(actualPath);
+			Files.createDirectories(Paths.get("out"));
 			TextFileStemmer.stemFile(inputPath, actualPath);
 
 			List<String> expected = Files.readAllLines(expectedPath);
@@ -114,6 +115,7 @@ public class TextFileStemmerTest {
 			Path actualPath = Paths.get("out", "symbols.txt");
 
 			Files.deleteIfExists(actualPath);
+			Files.createDirectories(Paths.get("out"));
 			TextFileStemmer.stemFile(inputPath, actualPath);
 
 			List<String> expected = Files.readAllLines(expectedPath);
@@ -129,6 +131,7 @@ public class TextFileStemmerTest {
 			Path actualPath = Paths.get("out", "rfc475.txt");
 
 			Files.deleteIfExists(actualPath);
+			Files.createDirectories(Paths.get("out"));
 			TextFileStemmer.stemFile(inputPath, actualPath);
 
 			List<String> expected = Files.readAllLines(expectedPath);
@@ -144,6 +147,7 @@ public class TextFileStemmerTest {
 			Path actualPath = Paths.get("out", "pg37134.txt");
 
 			Files.deleteIfExists(actualPath);
+			Files.createDirectories(Paths.get("out"));
 			TextFileStemmer.stemFile(inputPath, actualPath);
 
 			List<String> expected = Files.readAllLines(expectedPath);
